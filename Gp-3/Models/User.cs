@@ -7,7 +7,8 @@ namespace Gp_3.Models
 {
     public class User
     {
-        public int id { get; set; }
+        
+        public int Id { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
         public string Email { get; set; }
