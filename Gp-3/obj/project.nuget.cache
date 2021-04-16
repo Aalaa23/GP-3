@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K6r3dlJ6PcC/y6un+q3pZfMF7C7hdsm9xIdDzbyNAN8aQn6zI0v1ggF/JNHdqENivw430qDEOb2jGjHhXxHu0Q==",
+  "dgSpecHash": "QRjvu0HDg752vkGjCgcUAAHDRYOWFbWoixAwWRfCeB8J8oO5xjNWQyXb47z5YS3WMwsFZNBX4TFtK+GsQ22a+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\mohammed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mohammed\\.nuget\\packages\\bootstrap\\4.6.0\\bootstrap.4.6.0.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\mohammed\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.4\\microsoft.aspnetcore.cryptography.keyderivation.5.0.4.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.4\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.4.nupkg.sha512",
@@ -63,6 +65,7 @@
     "C:\\Users\\mohammed\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\mohammed\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\mohammed\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
