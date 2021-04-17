@@ -83,3 +83,15 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\ref\Gp-3.dll
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.pdb
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.genruntimeconfig.cache
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\AdminHC\Index.cshtml.g.cs
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.dll
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\ref\Gp-3.dll
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.pdb
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.AssemblyInfoInputs.cache
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.AssemblyInfo.cs
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.RazorAssemblyInfo.cache
+C:\Users\lenovo\source\repos\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.RazorAssemblyInfo.cs
