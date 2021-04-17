@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace Gp_3.Models
 {
-    public class Customer
+    public class Seller
     {
-        
         public int Id { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
@@ -15,5 +14,9 @@ namespace Gp_3.Models
         public int Phone { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public int WhatsApp { get; set; }
+        public bool ActivityStatus { get; set; }
+        public string OnHoldAmount { get; set; }
+        public string AvailableAmount { get; set; }
     }
 }
