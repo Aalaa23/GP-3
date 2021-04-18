@@ -17,5 +17,7 @@ namespace Gp_3.Models
         public string Password { get; set; }
 
         public ICollection<CustomerAddress> Addresses { get; set; }
+        public WishList WishList { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }
