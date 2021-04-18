@@ -7,7 +7,7 @@ namespace Gp_3.Models
 {
     public class Seller
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
         public string Email { get; set; }

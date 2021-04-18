@@ -318,3 +318,5 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\zh-Hant\Microsoft.Code
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll

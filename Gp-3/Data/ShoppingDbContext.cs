@@ -6,11 +6,12 @@ using System.Text;
 
 namespace Gp_3.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ShoppingDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ShoppingDbContext(DbContextOptions<ShoppingDbContext> options)
             : base(options)
         {
+            
         }
     }
 }
