@@ -15,11 +15,13 @@ namespace Gp_3.Models
         public float Price { get; set; }
         public string Img { get; set; }
         public int AmountInStock { get; set; }
-        public int EntryDate { get; set; }
+        public DateTime EntryDate { get; set; }
         public float Rate { get; set; }
 
         public Seller Seller { get; set; }
         public Category Category { get; set; }
+        public ICollection<WishListProducts> WishList { get; set; }
+        public ICollection<CartProducts> Cart { get; set; }
 
     }
 }
