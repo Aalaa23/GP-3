@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Gp-3",
+    "\\Gp-3\\Areas",
+    "\\Gp-3\\Controllers",
+    "\\Gp-3\\Models",
+    "\\Gp-3\\Views"
   ],
-  "SelectedNode": "\\Gp-3.sln",
+  "SelectedNode": "\\Gp-3\\Controllers\\CustomerController.cs",
   "PreviewInSolutionExplorer": false
 }
