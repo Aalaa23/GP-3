@@ -7,9 +7,11 @@ namespace Gp_3.Models
 {
     public class CartProducts
     {
-        public int ID { get; set; }
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public int CartProductsID { get; set; }
+        public int CartID { get; set; }
+        public int ProductID { get; set; }
+        public int Qty { get; set; }
+        public Cart Cart { get; set; }
+        public Product Product { get; set; }
     }
 }

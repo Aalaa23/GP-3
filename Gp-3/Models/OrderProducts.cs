@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace Gp_3.Models
 {
-    public class OrderProduct
+    public class OrderProducts
     {
-        public int ID { get; set; }
+        public int OrderProductsID { get; set; }
         public int OrderID { get; set; }
+        public Order Order { get; set; }
         public int ProductID { get; set; }
+        public Product Product { get; set; }
         public int Qty { get; set; }
         public float PriceEach { get; set; }
         public float Total { get; set; }
-        public ICollection<Order> Order { get; set; }
-        public ICollection<Product> Products { get; set; }
 
     }
 }
