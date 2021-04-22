@@ -7,7 +7,7 @@ namespace Gp_3.Models
 {
     public class Admin
     {
-        public int ID { get; set; }
+        public int AdminID { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
         public string Email { get; set; }

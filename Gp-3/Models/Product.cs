@@ -7,7 +7,7 @@ namespace Gp_3.Models
 {
     public class Product
     {
-        public int ID { get; set; }
+        public int ProductID { get; set; }
         public int CategoryID { get; set; }
         public int SellerID { get; set; }
         public string Title { get; set; }
@@ -20,8 +20,9 @@ namespace Gp_3.Models
 
         public Seller Seller { get; set; }
         public Category Category { get; set; }
-        public ICollection<WishListProducts> WishList { get; set; }
-        public ICollection<CartProducts> Cart { get; set; }
+        public ICollection<WishListProducts> WishListProducts { get; set; }
+        public ICollection<CartProducts> CartProducts { get; set; }
+        public ICollection<OrderProducts> OrderProducts { get; set; }
 
     }
 }

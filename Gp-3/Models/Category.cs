@@ -7,7 +7,7 @@ namespace Gp_3.Models
 {
     public class Category
     {
-        public int ID { get; set; }
+        public int CategoryID { get; set; }
         public string Title { get; set; }
         public ICollection<Product> Products { get; set; }
     }

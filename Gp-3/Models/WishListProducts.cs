@@ -7,10 +7,10 @@ namespace Gp_3.Models
 {
     public class WishListProducts
     {
-        public int ID { get; set; }
+        public int WishListProductsID { get; set; }
         public int WishListID { get; set; }
+        public WishList WishList { get; set; }
         public int ProductID { get; set; }
-        public ICollection<WishList> WishList { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public Product Product { get; set; }
     }
 }
