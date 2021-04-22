@@ -9,9 +9,7 @@ namespace Gp_3.Models
     {
         
         public int CustomerID { get; set; }
-        public int WishListID { get; set; }
         public WishList WishList { get; set; }
-        public int CartID { get; set; }
         public Cart Cart { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
