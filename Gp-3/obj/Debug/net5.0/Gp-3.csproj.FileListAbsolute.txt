@@ -242,7 +242,6 @@ C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\zh-Hant\Microsoft.
 C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
-C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Register.cshtml.g.cs
 C:\Users\QOW QOW\OneDrive\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.dll
 C:\Users\QOW QOW\OneDrive\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\ref\Gp-3.dll
 C:\Users\QOW QOW\OneDrive\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.pdb
@@ -330,3 +329,11 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Log
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shipper\Index.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shipper\OrderDetails.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csprojAssemblyReference.cache
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Register.cshtml.g.cs
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Index.cshtml.g.cs
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Login.cshtml.g.cs
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shipper\Index.cshtml.g.cs
+C:\Users\mohammed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shipper\OrderDetails.cshtml.g.cs
