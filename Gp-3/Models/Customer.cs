@@ -17,6 +17,7 @@ namespace Gp_3.Models
         public int Phone { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
 
         public ICollection<CustomerAddress> Addresses { get; set; }
        
