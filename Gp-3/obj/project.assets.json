@@ -8711,24 +8711,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nada\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mohammed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nada\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
+      "projectUniqueName": "C:\\Users\\mohammed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
       "projectName": "Gp-3",
-      "projectPath": "C:\\Users\\Nada\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
-      "packagesPath": "C:\\Users\\Nada\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nada\\Documents\\GitHub\\GP-3\\Gp-3\\obj\\",
+      "projectPath": "C:\\Users\\mohammed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
+      "packagesPath": "C:\\Users\\mohammed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mohammed\\Documents\\GitHub\\GP-3\\Gp-3\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Nada\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mohammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8823,7 +8818,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
