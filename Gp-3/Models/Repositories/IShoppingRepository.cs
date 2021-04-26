@@ -10,9 +10,9 @@ namespace Gp_3.Models.Repositories
         IList<TEntity> List();
         TEntity Find(int id);
         void Add(TEntity Entity);
-        void Update(int id,TEntity Entity);
+        void Update(TEntity Entity);
         void Delete(int id);
-        List<TEntity> Search(string term);
+        void Commit();
 
     }
 }
