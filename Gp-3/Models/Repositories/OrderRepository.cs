@@ -45,6 +45,7 @@ namespace Gp_3.Models.Repositories
         public void Update(Order Entity)
         {
             db.Orders.Update(Entity);
+            Commit();
         }
     }
 }
