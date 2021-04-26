@@ -32,7 +32,6 @@ namespace Gp_3.Data
         //Order Related : 
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
-        public DbSet<OrderProducts> OrderProducts { get; set; }
 
         //WishList Related : 
 

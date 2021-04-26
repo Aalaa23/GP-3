@@ -11,6 +11,7 @@ namespace Gp_3.Models
         public int CustomerID { get; set; }
 
         public Customer Customer { get; set; }
+        public int TotalPrice { get; set; }
         public ICollection<CartProducts> CartProducts { get; set; }
     }
 }

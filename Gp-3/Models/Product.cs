@@ -22,7 +22,7 @@ namespace Gp_3.Models
         public Category Category { get; set; }
         public ICollection<WishListProducts> WishListProducts { get; set; }
         public ICollection<CartProducts> CartProducts { get; set; }
-        public ICollection<OrderProducts> OrderProducts { get; set; }
+        public ICollection<OrderDetails> OrderDetails { get; set; }
 
     }
 }
