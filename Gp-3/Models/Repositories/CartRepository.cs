@@ -45,8 +45,8 @@ namespace Gp_3.Models.Repositories
 
         public void Update(Cart Entity)
         {
-            db.Update(Entity);
-            Commit();
+          db.Update(Entity);
+            Commit();  
         }
     }
 }
