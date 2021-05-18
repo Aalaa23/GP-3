@@ -78,7 +78,21 @@ namespace Gp_3.Controllers
             return RedirectToAction("Index");
         }
 
-       
+        public IActionResult DeleteSeller(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Seller seller = db.Sellers.Find(id);
+            if (seller == null)
+            {
+                return RedirectToAction("Index");
+            }
+            db.Sellers.Remove(seller);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }
