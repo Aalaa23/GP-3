@@ -4,16 +4,14 @@ using Gp_3.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Gp_3.Data.Migrations
+namespace Gp_3.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20210426115609_UpdateDB")]
-    partial class UpdateDB
+    partial class ShoppingDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
