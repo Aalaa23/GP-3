@@ -1,7 +1,8 @@
 ﻿using Gp_3.Data;
 using Gp_3.Models;
-using Gp_3.Models.ViewModel;
+using Gp_3.Models.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,6 +15,17 @@ namespace Gp_3.Controllers
     public class AdminController : Controller
     {
         private readonly ShoppingDbContext db;
+        private readonly IShoppingRepository<Category> CategoryRepository;
+        private readonly IShoppingRepository<Customer> CustomerRepository;
+        private readonly IWebHostEnvironment hosting;
+        public AdminController(IShoppingRepository<Category> CategoryRepository,
+            IShoppingRepository<Customer> CustomerRepository,
+            IWebHostEnvironment hosting)
+        {
+            this.CategoryRepository = CategoryRepository;
+            this.CustomerRepository = CustomerRepository;
+            this.hosting = hosting;
+        }
 
         public AdminController(ShoppingDbContext _db)
         {
@@ -94,5 +106,16 @@ namespace Gp_3.Controllers
             return RedirectToAction("Index");
         }
 
+        //GET : Add category
+        public IActionResult AddCategory(int id)
+        {
+            return View();
+        }
+
+        //POST : Add category.
+        public IActionResult AddCategory()
+        {
+            return View();
+        }
     }
 }
