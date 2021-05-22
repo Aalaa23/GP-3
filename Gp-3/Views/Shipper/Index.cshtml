@@ -2,7 +2,6 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +20,10 @@
     <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+
+
 </head>
 <body>
     <div class="card">
@@ -45,10 +48,53 @@
                     </thead>
                     <tbody>
                         <tr>
-                             <td><a href="#">OR9842</a></td>
+                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
 
                             <td>
-                                <a href="#" class="btn btn-sm btn-secondary">Call of Duty IV</a>
+                                <div class="container">
+
+                                    <!-- Trigger the modal with a button -->
+                                    <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header" style="display:inline;">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4>Order Details</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Order name:</p>
+                                                    <p>Amount:</p>
+                                                    <p>Seller name:</p>
+                                                    <p>Seller Phonenumber:</p>
+                                                    <p>Pickup address:</p>
+                                                    <p>Customer name:</p>
+                                                    <p>Customer phonenumber:</p>
+                                                    <p>Delivery address:</p>
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-info">Pending</button>
+                                                        <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                            <div class="dropdown-menu" role="menu">
+                                                                <a class="dropdown-item" href="#">Pending</a>
+                                                                <a class="dropdown-item" href="#">Shipped</a>
+                                                                <a class="dropdown-item" href="#">Delivered</a>
+                                                                <div class="dropdown-divider"></div>
+                                                            </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
                             </td>
                             <td>Cairo</td>
                             <td>
@@ -65,6 +111,8 @@
                             </td>
 
                         </tr>
+
+
                     </tbody>
                 </table>
             </div>
