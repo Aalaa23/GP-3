@@ -12,9 +12,5 @@ namespace Gp_3.Controllers
         {
             return View();
         }
-        public IActionResult OrderDetails()
-        {
-            return View();
-        }
     }
 }
