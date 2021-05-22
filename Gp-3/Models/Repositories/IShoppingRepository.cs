@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Gp_3.Models.Repositories
 {
-    interface IShoppingRepository<TEntity>
+     public interface IShoppingRepository<TEntity>
     {
         IList<TEntity> List();
         TEntity Find(int id);

@@ -1,4 +1,5 @@
-﻿using Gp_3.Models.ViewModel;
+﻿using Gp_3.Models;
+using Gp_3.Models.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -51,5 +52,16 @@ namespace Gp_3.Controllers
 
         //    return View(model);
         //}
+        
+        //GET : Add product.
+        public IActionResult AddProduct(int id) {
+            return View();
+        }
+
+        //POST : Add Product/
+        public IActionResult AddProduct(Product product)
+        {
+            return View();
+        }
     }
 }
