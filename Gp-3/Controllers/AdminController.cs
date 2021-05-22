@@ -14,22 +14,19 @@ namespace Gp_3.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly ShoppingDbContext db;
-        private readonly IShoppingRepository<Category> CategoryRepository;
-        private readonly IShoppingRepository<Customer> CustomerRepository;
+        private readonly IShoppingRepository<Category> categoryRepository;
+        private readonly IShoppingRepository<Seller> sellerRepository;
+        private readonly IShoppingRepository<Customer> customerRepository;
         private readonly IWebHostEnvironment hosting;
-        public AdminController(IShoppingRepository<Category> CategoryRepository,
-            IShoppingRepository<Customer> CustomerRepository,
+        public AdminController(IShoppingRepository<Category> categoryRepository,
+            IShoppingRepository<Seller> sellerRepository,
+            IShoppingRepository<Customer> customerRepository,
             IWebHostEnvironment hosting)
         {
-            this.CategoryRepository = CategoryRepository;
-            this.CustomerRepository = CustomerRepository;
+            this.categoryRepository = categoryRepository;
+            this.sellerRepository = sellerRepository;
+            this.customerRepository = customerRepository;
             this.hosting = hosting;
-        }
-
-        public AdminController(ShoppingDbContext _db)
-        {
-            db = _db;
         }
 
         public IActionResult Index()
@@ -74,35 +71,25 @@ namespace Gp_3.Controllers
         //    return View(model);
         //}
 
-        public IActionResult DeleteCustomer(int? id)
+        public IActionResult DeleteCustomer(int id)
         {
-            if (id == null)
-            {
-                return RedirectToAction("Index");
-            }
-            Customer customer = db.Customers.Find(id);
+            Customer customer = customerRepository.Find(id);
             if (customer == null)
             {
                 return RedirectToAction("Index");
             }
-            db.Customers.Remove(customer);
-            db.SaveChanges();
+            customerRepository.Delete(id);
             return RedirectToAction("Index");
         }
 
-        public IActionResult DeleteSeller(int? id)
+        public IActionResult DeleteSeller(int id)
         {
-            if (id == null)
-            {
-                return RedirectToAction("Index");
-            }
-            Seller seller = db.Sellers.Find(id);
+            Seller seller = sellerRepository.Find(id);
             if (seller == null)
             {
                 return RedirectToAction("Index");
             }
-            db.Sellers.Remove(seller);
-            db.SaveChanges();
+            sellerRepository.Delete(id);
             return RedirectToAction("Index");
         }
 
