@@ -821,13 +821,10 @@ C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.TagHelpers.inp
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.TagHelpers.output.cache
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.RazorCoreGenerate.cache
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\AdminHC\Index.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Register.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Index.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Login.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -841,3 +838,4 @@ C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.RazorTargetAss
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.Views.pdb
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csproj.CopyComplete
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.genruntimeconfig.cache
+C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
