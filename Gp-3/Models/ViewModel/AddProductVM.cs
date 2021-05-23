@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gp_3.Models
+namespace Gp_3.Models.ViewModel
 {
-    public class Product
+    public class AddProductVM
     {
+        public int ID { get; set; }
         public int ProductID { get; set; }
         public int CategoryID { get; set; }
         public int SellerID { get; set; }
@@ -16,12 +17,6 @@ namespace Gp_3.Models
         public string Img { get; set; }
         public int AmountInStock { get; set; }
         public float Rate { get; set; }
-
-        public Seller Seller { get; set; }
-        public Category Category { get; set; }
-        public ICollection<WishListProducts> WishListProducts { get; set; }
-        public ICollection<CartProducts> CartProducts { get; set; }
-        public ICollection<OrderDetails> OrderDetails { get; set; }
-
+        public List<Category> Categories { get; set; }
     }
 }

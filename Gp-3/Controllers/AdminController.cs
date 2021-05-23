@@ -55,17 +55,6 @@ namespace Gp_3.Controllers
             sellerRepository.Delete(id);
             return RedirectToAction("Index");
         }
-
-        //GET : Add category
-        public IActionResult AddCategory(int id)
-        {
-            return View();
-        }
-
-        //POST : Add category.
-        public IActionResult AddCategory()
-        {
-            return View();
         }
     }
-}
+            
