@@ -4,14 +4,16 @@ using Gp_3.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Gp_3.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    partial class ShoppingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210523022954_seee")]
+    partial class seee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -285,6 +287,9 @@ namespace Gp_3.Migrations
                     b.Property<string>("Desc")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
 
@@ -393,6 +398,9 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("Desc")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
