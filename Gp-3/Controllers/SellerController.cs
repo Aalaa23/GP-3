@@ -1,16 +1,24 @@
 ﻿using Gp_3.Models;
-using Gp_3.Models.ViewModel;
+using Gp_3.Models.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gp_3.Models.ViewModel;
 
 namespace Gp_3.Controllers
 {
     public class SellerController : Controller
     {
+        private readonly IShoppingRepository<Category> categoryRepository;
+
+        public SellerController(IShoppingRepository<Category> categoryRepository)
+        {
+            this.categoryRepository = categoryRepository;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -52,16 +60,25 @@ namespace Gp_3.Controllers
 
         //    return View(model);
         //}
-        
+
         //GET : Add product.
-        public IActionResult AddProduct(int id) {
+        public IActionResult Create(int sellerId)
+        {
+            var Categories = categoryRepository.List().ToList();
+            var model = new AddProductVM
+            {
+                Categories = Categories,
+                SellerID = sellerId
+            };
             return View();
         }
 
         //POST : Add Product/
-        public IActionResult AddProduct(Product product)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Product product)
         {
-            return View();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
