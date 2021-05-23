@@ -36,7 +36,7 @@ namespace Gp_3
             services.AddScoped<IShoppingRepository<Category>,CategoryRepository>();
             services.AddScoped<IShoppingRepository<Seller>,SellerRepository>();
             services.AddScoped<IShoppingRepository<Customer>,CustomerRepository>();
-
+            //services.AddIdentity<IdentityUser, IdentityRole>();   
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ShoppingDbContext>();
             services.AddControllersWithViews();
