@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Gp_3.Models.Repositories
 {
-    public class CategoryReposiitory : IShoppingRepository<Category>
+    public class CategoryRepository : IShoppingRepository<Category>
     {
         ShoppingDbContext db;
 
-        public CategoryReposiitory(ShoppingDbContext _db)
+        public CategoryRepository(ShoppingDbContext _db)
         {
             db = _db;
         }
