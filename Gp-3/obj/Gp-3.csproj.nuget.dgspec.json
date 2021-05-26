@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\source\\repos\\New folder\\GP-3\\Gp-3\\Gp-3.csproj": {}
+    "C:\\Users\\lenovo\\source\\repos\\GP-3\\Gp-3\\Gp-3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\source\\repos\\New folder\\GP-3\\Gp-3\\Gp-3.csproj": {
+    "C:\\Users\\lenovo\\source\\repos\\GP-3\\Gp-3\\Gp-3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\New folder\\GP-3\\Gp-3\\Gp-3.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\GP-3\\Gp-3\\Gp-3.csproj",
         "projectName": "Gp-3",
-        "projectPath": "C:\\Users\\lenovo\\source\\repos\\New folder\\GP-3\\Gp-3\\Gp-3.csproj",
+        "projectPath": "C:\\Users\\lenovo\\source\\repos\\GP-3\\Gp-3\\Gp-3.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\source\\repos\\New folder\\GP-3\\Gp-3\\obj\\",
+        "outputPath": "C:\\Users\\lenovo\\source\\repos\\GP-3\\Gp-3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,61 +42,27 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.6, )"
-            },
-            "Microsoft.AspNetCore.Hosting": {
-              "target": "Package",
-              "version": "[2.2.7, )"
-            },
-            "Microsoft.AspNetCore.Hosting.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.6, )"
-            },
-            "Microsoft.AspNetCore.Mvc.DataAnnotations": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
-            },
-            "System.Collections": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "System.ComponentModel.Annotations": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "bootstrap": {
-              "target": "Package",
-              "version": "[5.0.1, )"
             }
           },
           "imports": [
@@ -117,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

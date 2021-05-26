@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Gp_3-88BC277A-695A-414A-A56F-5F007DA456C1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gp-3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
