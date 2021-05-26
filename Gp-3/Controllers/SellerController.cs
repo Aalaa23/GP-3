@@ -1,4 +1,5 @@
 ﻿using Gp_3.Models;
+using Gp_3.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -16,7 +17,10 @@ namespace Gp_3.Controllers
         }
         
         //GET : Add product.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult AddProduct(int id) {
+            
             return View();
         }
 
