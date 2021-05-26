@@ -14,7 +14,6 @@ namespace Gp_3.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly IShoppingRepository<Category> categoryRepository;
         private readonly IShoppingRepository<Seller> sellerRepository;
         private readonly IShoppingRepository<Customer> customerRepository;
         private readonly IWebHostEnvironment hosting;
@@ -23,7 +22,6 @@ namespace Gp_3.Controllers
             IShoppingRepository<Customer> customerRepository,
             IWebHostEnvironment hosting)
         {
-            this.categoryRepository = categoryRepository;
             this.sellerRepository = sellerRepository;
             this.customerRepository = customerRepository;
             this.hosting = hosting;
