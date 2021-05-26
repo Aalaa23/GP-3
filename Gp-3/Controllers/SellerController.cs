@@ -16,6 +16,7 @@ namespace Gp_3.Controllers
         }
         
         //GET : Add product.
+
         public IActionResult AddProduct(int id) {
             return View();
         }

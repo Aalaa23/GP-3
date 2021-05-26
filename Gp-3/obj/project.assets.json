@@ -8907,19 +8907,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Voli\\.nuget\\packages\\": {}
+    "C:\\Users\\mohamed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
+      "projectUniqueName": "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
       "projectName": "Gp-3",
-      "projectPath": "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
-      "packagesPath": "C:\\Users\\Voli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\obj\\",
+      "projectPath": "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
+      "packagesPath": "C:\\Users\\mohamed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Voli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9022,7 +9022,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
