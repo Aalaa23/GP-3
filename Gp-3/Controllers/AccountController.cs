@@ -69,7 +69,7 @@ namespace Gp_3.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                         EmailConfirmed = true,
+                    EmailConfirmed = true,
                 };
 
                 // Store user data in AspNetUsers database table
