@@ -10,6 +10,7 @@ namespace Gp_3.Models
         public int ProductID { get; set; }
         public int CategoryID { get; set; }
         public int SellerID { get; set; }
+        public int InventoryID { get; set; }
         public string Title { get; set; }
         public string Desc { get; set; }
         public float Price { get; set; }
@@ -19,9 +20,11 @@ namespace Gp_3.Models
 
         public Seller Seller { get; set; }
         public Category Category { get; set; }
+        public ICollection<Inventory> Inventory { get; set; }
         public ICollection<WishListProducts> WishListProducts { get; set; }
         public ICollection<CartProducts> CartProducts { get; set; }
         public ICollection<OrderDetails> OrderDetails { get; set; }
+        public ICollection<InventoryProducts> InventoryProducts { get; set; }
 
     }
 }

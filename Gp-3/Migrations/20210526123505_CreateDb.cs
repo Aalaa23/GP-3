@@ -8,6 +8,27 @@ namespace Gp_3.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "AddProductVM",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductID = table.Column<int>(type: "int", nullable: false),
+                    CategoryID = table.Column<int>(type: "int", nullable: false),
+                    SellerID = table.Column<int>(type: "int", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Desc = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<float>(type: "real", nullable: false),
+                    Img = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AmountInStock = table.Column<int>(type: "int", nullable: false),
+                    Rate = table.Column<float>(type: "real", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AddProductVM", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Admins",
                 columns: table => new
                 {
@@ -61,19 +82,6 @@ namespace Gp_3.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
-                {
-                    CategoryID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.CategoryID);
                 });
 
             migrationBuilder.CreateTable(
@@ -132,6 +140,26 @@ namespace Gp_3.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Shippers", x => x.ShipperID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    CategoryID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AddProductVMID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.CategoryID);
+                    table.ForeignKey(
+                        name: "FK_Categories_AddProductVM_AddProductVMID",
+                        column: x => x.AddProductVMID,
+                        principalTable: "AddProductVM",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -363,7 +391,6 @@ namespace Gp_3.Migrations
                     Price = table.Column<float>(type: "real", nullable: false),
                     Img = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AmountInStock = table.Column<int>(type: "int", nullable: false),
-                    EntryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Rate = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
@@ -526,6 +553,11 @@ namespace Gp_3.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Categories_AddProductVMID",
+                table: "Categories",
+                column: "AddProductVMID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Inventories_SellerID",
                 table: "Inventories",
                 column: "SellerID");
@@ -636,6 +668,9 @@ namespace Gp_3.Migrations
 
             migrationBuilder.DropTable(
                 name: "Customers");
+
+            migrationBuilder.DropTable(
+                name: "AddProductVM");
         }
     }
 }
