@@ -653,9 +653,7 @@ C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\A
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\AdminHC\Index.cshtml.g.cs
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
-C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Register.cshtml.g.cs
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Index.cshtml.g.cs
-C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Login.cshtml.g.cs
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -842,3 +840,10 @@ C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csproj.CopyCom
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.genruntimeconfig.cache
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csprojAssemblyReference.cache
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Create.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Create.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\AddCategory.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
+C:\Users\lenovo\source\repos\New folder\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Details.cshtml.g.cs
