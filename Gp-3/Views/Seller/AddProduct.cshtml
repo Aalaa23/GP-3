@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Gp_3.Models.ViewModel.AddProductVM
+ <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -132,64 +133,47 @@
 
                                                 <div class="row accordion-body-wrapper">
 
-                                                    <form action="#">
+                                                    <form asp-action="AddProduct" method="POST" enctype="multipart/form-data" >
 
                                                         <div class="col-sm-12 padding-right-md">
-
 
                                                             <div class="xs-margin half">
                                                             </div>
 
                                                             <div class="form-group">
-                                                                <label for="ProductName" class="form-label">
-                                                                    Product Name:
-
-                                                                    <span class="required">
-                                                                        *
-                                                                    </span>
-                                                                </label>
-                                                                <input type="text" name="ProductName" id="ProductName" class="form-control input-lg" required>
+                                                                <label asp-for="Title" class="form-label">Product Name: <span class="required">*</span> </label>
+                                                                <input type="text" asp-for="Title" name="ProductName" id="ProductName" class="form-control input-lg" required>
+                                                                <span asp-validation-for="Title" class="text-danger"></span>
                                                             </div>
 
                                                             <div class="form-group">
-                                                                <label for="ProductPrice" class="form-label">
-                                                                    Product Price:
-
-                                                                    <span class="required">
-                                                                        *
-                                                                    </span>
-                                                                </label>
-                                                                <input type="text" name="ProductPrice" id="ProductPrice" class="form-control input-lg" required>
+                                                                <label asp-for="Price" class="form-label"> Product Price:<span class="required" asp-for="">*</span></label>
+                                                                <input type="text" asp-for="Price" name="ProductPrice" id="ProductPrice" class="form-control input-lg" required>
+                                                                <span asp-validation-for="Price" class="text-danger"></span>
                                                             </div>
-
-
 
                                                             <div class="form-group">
-                                                                <label for="MoreInformation" class="form-label">
-                                                                    More Information:
-
-                                                                    <span class="required">
-                                                                        *
-                                                                    </span>
-                                                                </label>
-                                                                <input type="text" name="MoreInformation" id="MoreInformation" class="form-control input-lg" required>
+                                                                <label asp-for="Desc" class="form-label">Description: <span class="required">*</span> </label>
+                                                                <input asp-for="Desc" type="text" name="MoreInformation" id="MoreInformation" class="form-control input-lg" required>
+                                                                <span asp-validation-for="Desc" class="text-danger"></span>
                                                             </div>
-
-
+                                                            <div class="form-group">
+                                                                <label asp-for="AmountInStock" class="form-label">Description: <span class="required">*</span> </label>
+                                                                <input asp-for="AmountInStock" type="text" name="MoreInformation" id="MoreInformation" class="form-control input-lg" required>
+                                                                <span asp-validation-for="AmountInStock" class="text-danger"></span>
+                                                            </div>
 
                                                             <div class="mb10">
-                                                                <label class="control-label">Product Category</label>
-                                                                <select class="form-control chosen-select" data-placeholder="Choose a Country...">
-                                                                    <option value="Select Category">Product Category</option>
-
-                                                                </select>
+                                                                <label asp-for="Categories" class="control-label">Product Category</label>
+                                                                <select class="form-control chosen-select" asp-items="@(new SelectList(Model.Categories,"Id", "FullName"))" data-placeholder="Choose a Country..."></select>
                                                             </div>
+
                                                             <div class="form-group">
-                                                                <label class="control-label">Upload Image</label>
-
-                                                                <input type="file" id="img" name="img" accept="image/*">
-
+                                                                <label asp-for="Img" class="control-label">Upload Image</label>
+                                                                <input asp-for="Img" type="file" id="img" name="img" accept="image/*">
+                                                                <span asp-validation-for="Img" class="text-danger"></span>
                                                             </div>
+
                                                             <button type="button" class="btn btn-info btn-lg">Submit</button>
                                                             <div class="top-10px">
                                                             </div>
