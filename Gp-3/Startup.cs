@@ -1,4 +1,6 @@
 using Gp_3.Data;
+using Gp_3.Models;
+using Gp_3.Models.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,9 @@ namespace Gp_3
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddScoped<IShoppingRepository<Category>,CategoryRepository>();
+            services.AddScoped<IShoppingRepository<Seller>,SellerRepository>();
+            services.AddScoped<IShoppingRepository<Customer>,CustomerRepository>();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ShoppingDbContext>();
