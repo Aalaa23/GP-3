@@ -1,8 +1,15 @@
 ﻿<!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+
 <head>
     <meta charset="utf-8">
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Seller's products</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,19 +29,16 @@
     <link rel="stylesheet" href="~/css/owl.carousel.css">
     <link rel="stylesheet" href="~/css/main.css">
     <link rel="stylesheet" href="~/style.css">
-    <link rel="stylesheet" href="~/css/setting.css">
-    <link rel="stylesheet" href="~/css/responsive.css">
+    <link rel="stylesheet" href="css/setting.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
-    <!-- Start Loading -->
-    <section class="loading-overlay">
-        <div class="Loading-Page">
-            <h1 class="loader">Loading...</h1>
-        </div>
-    </section>
-    <!-- End Loading  -->
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  
     <!-- start header -->
     <header>
 
@@ -47,7 +51,7 @@
                     <div class="col-md-4 col-sm-4">
                         <!-- Logo section -->
                         <div class="logo">
-                            <h1><a href="index.html"><i class="fa fa-bookmark-o"></i> LookCare</a></h1>
+                            <h1><a href="~/index.html"><i class="fa fa-bookmark-o"></i> LookCare</a></h1>
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-2 col-sm-5 col-sm-offset-3 hidden-xs">
@@ -73,8 +77,8 @@
                 <div class="container">
                     <div class="navy">
                         <ul>
-                            <li><a href="sellerproducts.html"><span>Your Products</span></a></li>
-                            <li><a href="Homewithoutlogin.html"><span>Sign out</span></a></li>
+                            <li><a href="~/sellerproducts.html"><span>Your Products</span></a></li>
+                            <li><a href="~/Homewithoutlogin.html"><span>Sign out</span></a></li>
 
                         </ul>
                     </div>
@@ -94,78 +98,17 @@
         <section class="men_area pt-40">
             <div class="container">
                 <div class="row">
-
-
-                    <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add New Product</button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Product Details</h4>
-                                </div>
-                                <div class="modal-body">
-
-                                    <form method="post" action="#">
-                                        <div class="mb10">
-                                            <label class="control-label">Product name:</label>
-                                            <input type="text" class="form-control" />
-                                        </div>
-
-                                        <div class="mb10">
-                                            <label class="control-label">Product Price:</label>
-                                            <input type="password" class="form-control" />
-                                        </div>
-                                        <div class="mb10">
-                                            <label class="control-label">More information:</label>
-                                            <input type="password" class="form-control" />
-                                        </div>
-
-                                        <div class="mb10">
-                                            <label class="control-label">Product Category</label>
-                                            <select class="form-control chosen-select" data-placeholder="Choose a Country...">
-                                                <option value="Select Country">Select Category</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="mb10">
-                                            <label class="control-label">Upload Image</label>
-                                            <input type="file" id="img" name="img" accept="image/*">
-                                        </div>
-
-                                        <br />
-
-                                        <button class="btn btn-success btn-block">Submit</button>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                     <div class="col-lg-9 col-md-9 col-sm-9">
                         <div class="row">
                             <div class="col-lg-12">
 
                             </div>
                         </div>
-
-
                         <div id="shop-all" class="row">
                             <!-- Product Item #1 -->
                             <div class="col-xs-12 col-sm-6 col-md-4 product-item filter-best">
                                 <div class="product-img">
-                                    <a href="productdetailsseller.html"><img src="img/shop/index2_product1.png" alt="product"></a>
-
-
-
+                                    <a href="productdetailsseller.html"><img src="~/img/shop/index2_product1.png" alt="product"></a>
                                 </div>
                                 <!-- .product-img end -->
                                 <div class="product-bio">
@@ -181,15 +124,13 @@
                             <!-- .product-item end -->
                         </div>
 
-
-
-
                     </div>
 
                 </div>
             </div>
         </section>
-
+        <a href="@Url.Action("Create","Seller")" class="btn btn-info btn-lg">Add a new product</a>
+        @*<button type="button" class="btn btn-info btn-lg float-right" asp-action="AddProduct" asp-controller="Seller">Add New Product</button>*@
         <div class="clearfix"></div>
 
     </main>

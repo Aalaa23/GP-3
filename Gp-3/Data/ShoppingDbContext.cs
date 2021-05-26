@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Gp_3.Models.ViewModel;
 
 namespace Gp_3.Data
 {
@@ -41,5 +42,6 @@ namespace Gp_3.Data
         //Addresses Related : 
         public DbSet<CustomerAddress> Addresses { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Gp_3.Models.ViewModel.AddProductVM> AddProductVM { get; set; }
     }
 }

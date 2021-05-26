@@ -33,43 +33,6 @@ namespace Gp_3.Controllers
         {
             return View();
         }
-        //private readonly SignInManager<IdentityUser> signInManager;
-        //public AdminController(SignInManager<IdentityUser> signInManager)
-        //{
-        //    this.signInManager = signInManager;
-        //}
-
-        //[HttpPost]
-        //public async Task<IActionResult> Logout()
-        //{
-        //    await signInManager.SignOutAsync();
-        //    return RedirectToAction("index", "home");
-        //}
-
-        //[HttpGet]
-        //public IActionResult Login()
-        //{
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public async Task<IActionResult> Login(LoginViewModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var result = await signInManager.PasswordSignInAsync(
-        //            model.Email, model.Password, model.RememberMe, false);
-
-        //        if (result.Succeeded)
-        //        {
-        //            return RedirectToAction("index", "home");
-        //        }
-
-        //        ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
-        //    }
-
-        //    return View(model);
-        //}
 
         public IActionResult DeleteCustomer(int id)
         {
@@ -92,17 +55,6 @@ namespace Gp_3.Controllers
             sellerRepository.Delete(id);
             return RedirectToAction("Index");
         }
-
-        //GET : Add category
-        public IActionResult AddCategory(int id)
-        {
-            return View();
-        }
-
-        //POST : Add category.
-        public IActionResult AddCategory()
-        {
-            return View();
         }
     }
-}
+            

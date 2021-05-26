@@ -22,5 +22,6 @@ namespace Gp_3.Models
         public ICollection<CustomerAddress> Addresses { get; set; }
        
         public ICollection<Order> Orders { get; set; }
+
     }
 }
