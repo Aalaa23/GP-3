@@ -1,8 +1,6 @@
 ﻿using Gp_3.ViewModel;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +13,11 @@ namespace Gp_3.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
-        private readonly ILogger<AccountController>logger ;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager,
-            ILogger<AccountController>logger)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
-            this.logger = logger;
         }
 
         [HttpPost]
@@ -98,45 +93,6 @@ namespace Gp_3.Controllers
 
             return View(model);
         }
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult ForgotPassword()
-        {
-            return View();
-        }
-        [HttpPost]
-        [AllowAnonymous]
-        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                // Find the user by email
-                var user = await userManager.FindByEmailAsync(model.Email);
-                // If the user is found AND Email is confirmed
-                if (user != null && await userManager.IsEmailConfirmedAsync(user))
-                {
-                    // Generate the reset password token
-                    var token = await userManager.GeneratePasswordResetTokenAsync(user);
-
-                    // Build the password reset link
-                    var passwordResetLink = Url.Action("ResetPassword", "Account",
-                            new { email = model.Email, token = token }, Request.Scheme);
-
-                    // Log the password reset link
-                    logger.Log(LogLevel.Warning, passwordResetLink);
-
-                    // Send the user to Forgot Password Confirmation view
-                    return View("ForgotPasswordConfirmation");
-                }
-
-                // To avoid account enumeration and brute force attacks, don't
-                // reveal that the user does not exist or is not confirmed
-                return View("ForgotPasswordConfirmation");
-            }
-
-            return View(model);
-        }
-
 
     }
 
