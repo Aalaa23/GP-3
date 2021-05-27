@@ -851,3 +851,7 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.csproj.AssemblyRe
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddProduct.cshtml.g.cs
 >>>>>>> Voli
+C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddProduct.cshtml.g.cs
+C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
