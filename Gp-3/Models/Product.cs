@@ -16,6 +16,7 @@ namespace Gp_3.Models
         public float Price { get; set; }
         public string Img { get; set; }
         public int AmountInStock { get; set; }
+        public DateTime EntryDate { get; set; }
         public float Rate { get; set; }
 
         public Seller Seller { get; set; }

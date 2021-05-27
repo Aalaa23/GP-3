@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gp_3.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20210526123952_CreateDB")]
+    [Migration("20210527012816_CreateDB")]
     partial class CreateDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -189,6 +189,9 @@ namespace Gp_3.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("AddProductVMID")
+                        .HasColumnType("int");
+
                     b.Property<string>("BuildingNO")
                         .HasColumnType("nvarchar(max)");
 
@@ -197,6 +200,9 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("District")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
 
                     b.Property<int>("SellerID")
                         .HasColumnType("int");
@@ -209,9 +215,35 @@ namespace Gp_3.Migrations
 
                     b.HasKey("InventoryID");
 
+                    b.HasIndex("AddProductVMID");
+
+                    b.HasIndex("ProductID");
+
                     b.HasIndex("SellerID");
 
                     b.ToTable("Inventories");
+                });
+
+            modelBuilder.Entity("Gp_3.Models.InventoryProducts", b =>
+                {
+                    b.Property<int>("InventoryProductsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("InventoryID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("InventoryProductsID");
+
+                    b.HasIndex("InventoryID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("InventoryProducts");
                 });
 
             modelBuilder.Entity("Gp_3.Models.Order", b =>
@@ -287,8 +319,14 @@ namespace Gp_3.Migrations
                     b.Property<string>("Desc")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("InventoryID")
+                        .HasColumnType("int");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
@@ -398,6 +436,9 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("InventoryID")
+                        .HasColumnType("int");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
@@ -709,13 +750,44 @@ namespace Gp_3.Migrations
 
             modelBuilder.Entity("Gp_3.Models.Inventory", b =>
                 {
+                    b.HasOne("Gp_3.Models.ViewModel.AddProductVM", null)
+                        .WithMany("Inventories")
+                        .HasForeignKey("AddProductVMID");
+
+                    b.HasOne("Gp_3.Models.Product", "Product")
+                        .WithMany("Inventory")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Gp_3.Models.Seller", "Seller")
                         .WithMany("Inventories")
                         .HasForeignKey("SellerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Product");
+
                     b.Navigation("Seller");
+                });
+
+            modelBuilder.Entity("Gp_3.Models.InventoryProducts", b =>
+                {
+                    b.HasOne("Gp_3.Models.Inventory", "Inventory")
+                        .WithMany("InventoryProducts")
+                        .HasForeignKey("InventoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Gp_3.Models.Product", "Product")
+                        .WithMany("InventoryProducts")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Inventory");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Gp_3.Models.Order", b =>
@@ -869,6 +941,11 @@ namespace Gp_3.Migrations
                     b.Navigation("WishList");
                 });
 
+            modelBuilder.Entity("Gp_3.Models.Inventory", b =>
+                {
+                    b.Navigation("InventoryProducts");
+                });
+
             modelBuilder.Entity("Gp_3.Models.Order", b =>
                 {
                     b.Navigation("OrderDetails");
@@ -877,6 +954,10 @@ namespace Gp_3.Migrations
             modelBuilder.Entity("Gp_3.Models.Product", b =>
                 {
                     b.Navigation("CartProducts");
+
+                    b.Navigation("Inventory");
+
+                    b.Navigation("InventoryProducts");
 
                     b.Navigation("OrderDetails");
 
@@ -893,6 +974,8 @@ namespace Gp_3.Migrations
             modelBuilder.Entity("Gp_3.Models.ViewModel.AddProductVM", b =>
                 {
                     b.Navigation("Categories");
+
+                    b.Navigation("Inventories");
                 });
 
             modelBuilder.Entity("Gp_3.Models.WishList", b =>

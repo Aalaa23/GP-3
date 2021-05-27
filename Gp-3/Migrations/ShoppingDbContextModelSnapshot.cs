@@ -187,6 +187,9 @@ namespace Gp_3.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("AddProductVMID")
+                        .HasColumnType("int");
+
                     b.Property<string>("BuildingNO")
                         .HasColumnType("nvarchar(max)");
 
@@ -209,6 +212,8 @@ namespace Gp_3.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("InventoryID");
+
+                    b.HasIndex("AddProductVMID");
 
                     b.HasIndex("ProductID");
 
@@ -311,6 +316,9 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("Desc")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
@@ -426,6 +434,9 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("InventoryID")
+                        .HasColumnType("int");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
@@ -737,6 +748,10 @@ namespace Gp_3.Migrations
 
             modelBuilder.Entity("Gp_3.Models.Inventory", b =>
                 {
+                    b.HasOne("Gp_3.Models.ViewModel.AddProductVM", null)
+                        .WithMany("Inventories")
+                        .HasForeignKey("AddProductVMID");
+
                     b.HasOne("Gp_3.Models.Product", "Product")
                         .WithMany("Inventory")
                         .HasForeignKey("ProductID")
@@ -957,6 +972,8 @@ namespace Gp_3.Migrations
             modelBuilder.Entity("Gp_3.Models.ViewModel.AddProductVM", b =>
                 {
                     b.Navigation("Categories");
+
+                    b.Navigation("Inventories");
                 });
 
             modelBuilder.Entity("Gp_3.Models.WishList", b =>

@@ -43,6 +43,6 @@ namespace Gp_3.Data
         public DbSet<CustomerAddress> Addresses { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<InventoryProducts> InventoryProducts { get; set; }
-        public DbSet<Gp_3.Models.ViewModel.AddProductVM> AddProductVM { get; set; }
+        public DbSet<AddProductVM> AddProductVM { get; set; }
     }
 }
