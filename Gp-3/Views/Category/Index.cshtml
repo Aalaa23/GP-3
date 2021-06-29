@@ -121,19 +121,18 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            var value = item.Title;
                             <tr>
                                 <!-- Category ID -->
-                                <td>@Html.DisplayFor(modelItem => item.CategoryID)</td>
+                                <td><span class="CatID">@Html.DisplayFor(modelItem => item.CategoryID)</span></td>
                                 <!-- Category Title -->
-                                <td>@Html.DisplayFor(modelItem => item.Title) </td>
+                                <td><span class="cat_name">@Html.DisplayFor(modelItem => item.Title) </span></td>
                                 <!-- Row for midification buttons -->
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal">Update</button>
+                                    <button type="button" class="btn btn-sm btn-info update_btn">Update</button>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn  bg-gradient-danger ">Delete</button>
-                                </td>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.CategoryID" onclick="return confirm('Are you sure that you want to delete this element?')">Delete</a> 
+                                 </td>
 
                                 <td>
                                     <div class="btn-group">
@@ -146,9 +145,9 @@
                 </table>
 
                 <div class="container">
-                    <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal fade" id="EditModal" role="dialog">
                         <div class="modal-dialog">
-                            <form method="GET" asp-controller="Category" asp-action="Edit">
+                            <form method="POST" asp-controller="Category" asp-action="Edit">
                                 <!-- Modal Content Start-->
                                 <div class="modal-content">
                                     <!--Modal Header Start-->
@@ -160,13 +159,14 @@
                                     <!-- Modal Body Start-->
                                     <div class="modal-body">
                                             <label class="control-label">Category Name:</label>
-                                            <input type="text" class="form-control" name="Title" value="5" />
+                                            <input type="text" class="form-control" id="modal_cat_name" name="Title" />
+                                            <input type="hidden" class="form-control" id="modal_cat_id" name="CategoryID" hidden />
                                     </div>
                                     <!-- Modal Body End-->
                                     <!-- Modal Footer Start-->
                                     <div class="modal-footer">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-info">Submit</button>
+                                            <button type="submit" class="btn btn-info">Submit</button>
                                         </div>
                                     </div>
                                     <!-- Modal Body End-->
@@ -201,5 +201,14 @@
 
     <!-- PAGE SCRIPTS -->
     <script src="~/dist/js/pages/dashboard2.js"></script>
+    <script>
+        $(".update_btn").click(function () {
+            var cat_name = $(this).closest('tr').find('.cat_name').text();
+            var cat_id = $(this).closest('tr').find('.CatID').text();
+            $("#modal_cat_name").val(cat_name);
+            $("#modal_cat_id").val(cat_id);
+            $("#EditModal").modal('show');
+        });
+    </script>
 </body>
 </html>
