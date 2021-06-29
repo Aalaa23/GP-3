@@ -4,40 +4,202 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 
-<html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+    <p>
+        <a asp-action="AddCategory">Add New Category</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoryID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CategoryID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CategoryID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+    </body>
+    </html>*@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Categories</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+
+
 </head>
 <body>
-<p>
-    <a asp-action="AddCategory">Add New Category</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoryID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoryID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoryID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="card">
+        <div class="card-header border-transparent">
+            <h3 class="card-title">Categories</h3>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-sm btn-secondary float-right" data-toggle="modal" data-target="#myModal">Add New Category</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="display:inline;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>Category Details</h4>
+                        </div>
+                        <!-- Add category Form Begining -->
+                        <form method="post" asp-controller="Category" asp-action="AddCategory">
+                            <!-- Modal Body start -->
+                            <div class="modal-body">
+                                <div class="mb10">
+                                    <label class="control-label">Category Name:</label>
+                                    <input name="Title" type="text" class="form-control" />
+                                </div>
+                                <br />
+                            </div>
+                            <!-- Modal Body End-->
+                            <!-- Modal Footer start-->
+                            <div class="modal-footer">
+                                <div class="btn-group">
+                                    <input name="Title" type="submit" class="btn btn-info" value="Submit"/>
+                                </div>
+                            </div>
+                            <!-- Modal Footer End-->
+                        </form>
+                        <!-- Add category Form End -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table m-0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.CategoryID)</th>
+                            <th>@Html.DisplayNameFor(model => model.Title)</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            var value = item.Title;
+                            <tr>
+                                <!-- Category ID -->
+                                <td>@Html.DisplayFor(modelItem => item.CategoryID)</td>
+                                <!-- Category Title -->
+                                <td>@Html.DisplayFor(modelItem => item.Title) </td>
+                                <!-- Row for midification buttons -->
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal">Update</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn  bg-gradient-danger ">Delete</button>
+                                </td>
+
+                                <td>
+                                    <div class="btn-group">
+                                        <div class="dropdown-divider"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <div class="container">
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <form method="GET" asp-controller="Category" asp-action="Edit">
+                                <!-- Modal Content Start-->
+                                <div class="modal-content">
+                                    <!--Modal Header Start-->
+                                    <div class="modal-header" style="display:inline;">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4>Category Details</h4>
+                                    </div>
+                                    <!-- Modal Header End-->
+                                    <!-- Modal Body Start-->
+                                    <div class="modal-body">
+                                            <label class="control-label">Category Name:</label>
+                                            <input type="text" class="form-control" name="Title" value="5" />
+                                    </div>
+                                    <!-- Modal Body End-->
+                                    <!-- Modal Footer Start-->
+                                    <div class="modal-footer">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-info">Submit</button>
+                                        </div>
+                                    </div>
+                                    <!-- Modal Body End-->
+                                </div>
+                            </form>    <!-- Modal Content End-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+    </div>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/dist/js/adminlte.js"></script>
+
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="~/dist/js/demo.js"></script>
+
+    <!-- PAGE PLUGINS -->
+    <!-- jQuery Mapael -->
+    <script src="~/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="~/plugins/raphael/raphael.min.js"></script>
+    <script src="~/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+    <script src="~/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/plugins/chart.js/Chart.min.js"></script>
+
+    <!-- PAGE SCRIPTS -->
+    <script src="~/dist/js/pages/dashboard2.js"></script>
 </body>
 </html>
