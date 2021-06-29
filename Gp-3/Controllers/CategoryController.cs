@@ -54,16 +54,9 @@ namespace Gp_3.Controllers
                 return View();
             }
         }
-        public ActionResult Edit(int id)
-        {
-            var category = categoryRepository.Find(id);
-            return View(category);
-        }
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, Category category)
+        public ActionResult Edit( Category category)
         {
             try
             {
@@ -76,16 +69,9 @@ namespace Gp_3.Controllers
             }
         }
 
-        public ActionResult Delete(int id)
-        {
-            var seller = categoryRepository.Find(id);
-            return View();
-        }
 
-        // POST
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, Category category)
+        
+        public ActionResult Delete(int id)
         {
             try
             {
