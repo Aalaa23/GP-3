@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Gp_3.Migrations
 {
-    public partial class CreateDB : Migration
+    public partial class CreateDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,6 +16,7 @@ namespace Gp_3.Migrations
                     ProductID = table.Column<int>(type: "int", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
                     SellerID = table.Column<int>(type: "int", nullable: false),
+                    InventoryID = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Desc = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<float>(type: "real", nullable: false),
@@ -365,11 +366,18 @@ namespace Gp_3.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     District = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Street = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BuildingNO = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    BuildingNO = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AddProductVMID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Inventories", x => x.InventoryID);
+                    table.ForeignKey(
+                        name: "FK_Inventories_AddProductVM_AddProductVMID",
+                        column: x => x.AddProductVMID,
+                        principalTable: "AddProductVM",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Inventories_Sellers_SellerID",
                         column: x => x.SellerID,
@@ -436,6 +444,32 @@ namespace Gp_3.Migrations
                         principalTable: "Products",
                         principalColumn: "ProductID",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "InventoryProducts",
+                columns: table => new
+                {
+                    InventoryProductsID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    InventoryID = table.Column<int>(type: "int", nullable: true),
+                    ProductID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_InventoryProducts", x => x.InventoryProductsID);
+                    table.ForeignKey(
+                        name: "FK_InventoryProducts_Inventories_InventoryID",
+                        column: x => x.InventoryID,
+                        principalTable: "Inventories",
+                        principalColumn: "InventoryID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_InventoryProducts_Products_ProductID",
+                        column: x => x.ProductID,
+                        principalTable: "Products",
+                        principalColumn: "ProductID",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -558,9 +592,24 @@ namespace Gp_3.Migrations
                 column: "AddProductVMID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Inventories_AddProductVMID",
+                table: "Inventories",
+                column: "AddProductVMID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Inventories_SellerID",
                 table: "Inventories",
                 column: "SellerID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InventoryProducts_InventoryID",
+                table: "InventoryProducts",
+                column: "InventoryID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InventoryProducts_ProductID",
+                table: "InventoryProducts",
+                column: "ProductID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OrderDetails_OrderID",
@@ -631,7 +680,7 @@ namespace Gp_3.Migrations
                 name: "CartProducts");
 
             migrationBuilder.DropTable(
-                name: "Inventories");
+                name: "InventoryProducts");
 
             migrationBuilder.DropTable(
                 name: "OrderDetails");
@@ -650,6 +699,9 @@ namespace Gp_3.Migrations
 
             migrationBuilder.DropTable(
                 name: "Carts");
+
+            migrationBuilder.DropTable(
+                name: "Inventories");
 
             migrationBuilder.DropTable(
                 name: "Orders");

@@ -187,6 +187,9 @@ namespace Gp_3.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("AddProductVMID")
+                        .HasColumnType("int");
+
                     b.Property<string>("BuildingNO")
                         .HasColumnType("nvarchar(max)");
 
@@ -195,9 +198,6 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("District")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
 
                     b.Property<int>("SellerID")
                         .HasColumnType("int");
@@ -210,7 +210,7 @@ namespace Gp_3.Migrations
 
                     b.HasKey("InventoryID");
 
-                    b.HasIndex("ProductID");
+                    b.HasIndex("AddProductVMID");
 
                     b.HasIndex("SellerID");
 
@@ -224,10 +224,10 @@ namespace Gp_3.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("InventoryID")
+                    b.Property<int?>("InventoryID")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductID")
+                    b.Property<int?>("ProductID")
                         .HasColumnType("int");
 
                     b.HasKey("InventoryProductsID");
@@ -314,9 +314,6 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("InventoryID")
-                        .HasColumnType("int");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
@@ -426,6 +423,9 @@ namespace Gp_3.Migrations
 
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("InventoryID")
+                        .HasColumnType("int");
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
@@ -737,19 +737,15 @@ namespace Gp_3.Migrations
 
             modelBuilder.Entity("Gp_3.Models.Inventory", b =>
                 {
-                    b.HasOne("Gp_3.Models.Product", "Product")
-                        .WithMany("Inventory")
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Gp_3.Models.ViewModel.AddProductVM", null)
+                        .WithMany("Inventories")
+                        .HasForeignKey("AddProductVMID");
 
                     b.HasOne("Gp_3.Models.Seller", "Seller")
                         .WithMany("Inventories")
                         .HasForeignKey("SellerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Product");
 
                     b.Navigation("Seller");
                 });
@@ -758,15 +754,11 @@ namespace Gp_3.Migrations
                 {
                     b.HasOne("Gp_3.Models.Inventory", "Inventory")
                         .WithMany("InventoryProducts")
-                        .HasForeignKey("InventoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InventoryID");
 
                     b.HasOne("Gp_3.Models.Product", "Product")
                         .WithMany("InventoryProducts")
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductID");
 
                     b.Navigation("Inventory");
 
@@ -938,8 +930,6 @@ namespace Gp_3.Migrations
                 {
                     b.Navigation("CartProducts");
 
-                    b.Navigation("Inventory");
-
                     b.Navigation("InventoryProducts");
 
                     b.Navigation("OrderDetails");
@@ -957,6 +947,8 @@ namespace Gp_3.Migrations
             modelBuilder.Entity("Gp_3.Models.ViewModel.AddProductVM", b =>
                 {
                     b.Navigation("Categories");
+
+                    b.Navigation("Inventories");
                 });
 
             modelBuilder.Entity("Gp_3.Models.WishList", b =>
