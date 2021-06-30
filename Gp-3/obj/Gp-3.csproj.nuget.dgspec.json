@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj": {}
+    "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj": {
+    "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
+        "projectUniqueName": "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
         "projectName": "Gp-3",
-        "projectPath": "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
-        "packagesPath": "C:\\Users\\Voli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Voli\\Documents\\GitHub\\GP-3\\Gp-3\\obj\\",
+        "projectPath": "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\Gp-3.csproj",
+        "packagesPath": "C:\\Users\\mohamed\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mohamed\\Documents\\GitHub\\GP-3\\Gp-3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Voli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,7 +42,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
@@ -54,11 +54,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.AspNetCore.Mvc.DataAnnotations": {
               "target": "Package",
@@ -66,21 +66,29 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.7, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -96,7 +104,7 @@
             },
             "bootstrap": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[5.0.2, )"
             }
           },
           "imports": [

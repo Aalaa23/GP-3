@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gp_3.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20210629002815_CreateDb")]
-    partial class CreateDb
+    [Migration("20210629013335_CreatDB")]
+    partial class CreatDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

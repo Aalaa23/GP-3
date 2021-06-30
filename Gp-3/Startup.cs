@@ -36,10 +36,11 @@ namespace Gp_3
             services.AddScoped<IShoppingRepository<Category>,CategoryRepository>();
             services.AddScoped<IShoppingRepository<Seller>,SellerRepository>();
             services.AddScoped<IShoppingRepository<Customer>,CustomerRepository>();
-            //services.AddIdentity<IdentityUser, IdentityRole>();   
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ShoppingDbContext>();
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<ShoppingDbContext>()
+                    ;
             services.AddControllersWithViews();
+            services.AddRazorPages();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
