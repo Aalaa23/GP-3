@@ -146,10 +146,6 @@ C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\AdminHC\Index.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\AddCategory.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Details.cshtml.g.cs
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddProduct.cshtml.g.cs
@@ -170,7 +166,6 @@ C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.dll
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\ref\Gp-3.dll
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.pdb
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.genruntimeconfig.cache
-C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ForgotPassword.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ResetPassword.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
