@@ -1,8 +1,6 @@
 ﻿using Gp_3.ViewModel;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +13,18 @@ namespace Gp_3.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
+<<<<<<< HEAD
         private readonly ILogger<AccountController>logger;
 
         public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager
             , ILogger<AccountController> logger)
+=======
+
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+>>>>>>> saeed
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
-            this.logger = logger;
         }
 
         [HttpPost]
@@ -97,6 +99,7 @@ namespace Gp_3.Controllers
 
             return View(model);
         }
+<<<<<<< HEAD
         [HttpGet]
         [AllowAnonymous]
         public IActionResult ForgotPassword()
@@ -182,6 +185,8 @@ namespace Gp_3.Controllers
             return View(model);
         }
 
+=======
+>>>>>>> saeed
 
     }
 
