@@ -31,3 +31,5 @@ Gp-3/appsettings.json
 Gp-3/obj/Debug/net5.0/staticwebassets/Gp-3.StaticWebAssets.Manifest.cache
 Gp-3/obj/Debug/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 *.cache
+Gp-3/.vs/Gp-3/DesignTimeBuild/.dtbcache.v2
+Gp-3/.vs/Gp-3/v16/.suo
