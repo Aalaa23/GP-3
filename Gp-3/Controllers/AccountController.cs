@@ -1,4 +1,5 @@
-﻿using Gp_3.ViewModel;
+﻿using Gp_3.Models;
+using Gp_3.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +14,11 @@ namespace Gp_3.Controllers
 
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
         private readonly ILogger<AccountController>logger;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager
             , ILogger<AccountController> logger)
         {
             this.userManager = userManager;
@@ -48,7 +49,23 @@ namespace Gp_3.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Register", "Account");
+                    if (User.IsInRole("Admin"))
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else if (User.IsInRole("Seller"))
+                    {
+                        return RedirectToAction("Index", "Seller");
+                    }
+                    else if (User.IsInRole("Shipper"))
+                    {
+                        return RedirectToAction("Index", "Shipper");
+                    }
+                    else if (User.IsInRole("Customer"))
+                    {
+                        return RedirectToAction("Index", "Customer");
+                    }
+                   
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
@@ -70,7 +87,7 @@ namespace Gp_3.Controllers
             if (ModelState.IsValid)
             {
                 // Copy data from RegisterViewModel to IdentityUser
-                var user = new IdentityUser
+                var user = new ApplicationUser
                 {
                     UserName = model.Email,
                     Email = model.Email,
@@ -86,15 +103,17 @@ namespace Gp_3.Controllers
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
+                   
+
                     return RedirectToAction("Login", "Account");
                 }
-
-                // If there are any errors, add them to the ModelState object
-                // which will be displayed by the validation summary tag helper
-                foreach (var error in result.Errors)
-                {
+               
+                 // If there are any errors, add them to the ModelState object
+                  // which will be displayed by the validation summary tag helper
+               foreach (var error in result.Errors)
+               {
                     ModelState.AddModelError(string.Empty, error.Description);
-                }
+               }     
             }
 
             return View(model);
