@@ -75,7 +75,9 @@ namespace Gp_3.Controllers
                 var user = new IdentityUser
                 {
                     UserName = model.Email,
-                    Email = model.Email
+                    Email = model.Email,
+                    EmailConfirmed = true
+                    
                 };
 
                 // Store user data in AspNetUsers database table
