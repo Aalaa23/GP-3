@@ -61,10 +61,11 @@ namespace Gp_3.Controllers
                     {
                         return RedirectToAction("Index", "Shipper");
                     }
-                    else if (User.IsInRole("Customer"))
+                    else
                     {
                         return RedirectToAction("Index", "Customer");
                     }
+                    
                    
                 }
 

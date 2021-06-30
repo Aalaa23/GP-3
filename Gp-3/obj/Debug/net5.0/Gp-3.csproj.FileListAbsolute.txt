@@ -314,7 +314,6 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.TagHelpers.input.
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.TagHelpers.output.cache
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Gp-3.RazorCoreGenerate.cache
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ForgotPassword.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
@@ -348,3 +347,8 @@ C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Adminis
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\EditRole.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
 C:\Users\mohamed\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\EditUsersInRole.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\EditRole.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\EditUsersInRole.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
