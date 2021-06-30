@@ -41,6 +41,15 @@ namespace Gp_3
                     ;
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+             services.AddHttpContextAccessor();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
         }
 
@@ -62,6 +71,8 @@ namespace Gp_3
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();
