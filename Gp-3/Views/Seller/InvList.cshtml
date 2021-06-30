@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventories</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,900,700,700italic,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/skin-lblue.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/normalize.css">
+
+    <link rel="stylesheet" href="~/css/ecommerce.css">
+
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/style.css">
+    <link rel="stylesheet" href="~/css/setting.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- start header -->
+    <header>
+        <!-- Header One Starts -->
+        <div class="header-1">
+
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <!-- Logo section -->
+                        <div class="logo">
+                            <h1><a href="index.html">Egyptian Hands</a></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 col-sm-5 col-sm-offset-3 hidden-xs">
+                        <!-- Search Form -->
+                        <div class="header-search">
+                            <form>
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Type Something">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-color" type="button">Search</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navi">
+                <div class="container">
+                    <div class="navy">
+                        <ul>
+                            <li><a asp-controller="Seller" asp-action="Profile"><span>Profile</span></a></li>
+                            <li><a asp-controller="Seller" asp-action="Index"><span>Products</span></a></li>
+                            <li><a asp-controller="Seller" asp-action="InvList"><span>Inventories</span></a></li>
+                            <li><a asp-controller="Seller" asp-action=""><span>Sign Out</span></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Header one ends -->
+
+    </header>
+    <!-- end header -->
+    <!-- start main content -->
+    <main class="main-container">
+        <!-- compare content -->
+        <!-- Main content starts -->
+        <div class="main-block">
+            <div class="container">
+                <!-- Actual content -->
+                <div class="ecommerce pt-40">
+                    <h2 class="accordion-title">
+                        <span>
+                            Your Inventories
+                        </span>
+                    </h2>
+                    <div class="text-right">
+                        <a href="addnewinventory.html" class="btn btn-custom-6 btn-lger min-width-sm">Add New Inventory</a>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- Shopping items content -->
+                            <div class="shopping-content">
+                                <!-- Block Title -->
+                                <!-- Shopping Edit Profile -->
+                                <div class="shopping-wishlist">
+                                    <!-- Recent Purchase Table -->
+                                    <div class=" table-responsive">
+                                        <table class="table table-bordered">
+                                            <!-- Table Header -->
+                                            <thead>
+                                                <tr>
+                                                    <th>Title</th>
+                                                    <th>City</th>
+                                                    <th>District</th>
+
+                                                    <th>Street</th>
+                                                    <th>BuildingNO</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <!-- Product image -->
+                                                    <td>
+                                                        Cairo
+                                                    </td>
+                                                    <td>district</td>
+
+                                                    <td>Street</td>
+                                                    <td>
+                                                        buildingno
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group btn-group-xs">
+                                                            <button class="btn btn-sm btn-default"><a href="updateinventory.html"><i class="fa fa-edit"></i> </a></button>
+                                                            <button class="btn btn-sm btn-red"><i class="fa fa-trash-o"></i> </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Pagination -->
+                                    <div class="shopping-pagination">
+                                        <ul class="pagination pull-right">
+                                            <li class="disabled"><a href="#">&laquo;</a></li>
+                                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+
+                                            <li><a href="#">&raquo;</a></li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- Pagination end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content ends -->
+        <!-- end compare content -->
+
+
+        <div class="clearfix"></div>
+        <!-- end service area -->
+    </main>
+    <!-- end main content -->
+    <!-- All Script -->
+    <script src="~/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/smoothscroll.js"></script>
+    <!-- Scroll up js
+    ============================================ -->
+    <script src="~/js/jquery.scrollUp.js"></script>
+    <script src="~/js/menu.js"></script>
+
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+
+
+</html>

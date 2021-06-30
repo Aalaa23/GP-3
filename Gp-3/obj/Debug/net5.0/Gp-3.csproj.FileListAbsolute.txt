@@ -323,7 +323,6 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\AdminHC\In
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
-C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddProduct.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Index.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -352,3 +351,6 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administra
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\EditUsersInRole.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddProduct.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\InvList.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Profile.cshtml.g.cs

@@ -49,6 +49,7 @@ namespace Gp_3.Controllers
 
                 if (result.Succeeded)
                 {
+                    
                     if (User.IsInRole("Admin"))
                     {
                         return RedirectToAction("Index", "Admin");
