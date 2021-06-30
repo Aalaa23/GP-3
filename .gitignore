@@ -30,3 +30,4 @@ _ReSharper*/
 Gp-3/appsettings.json
 Gp-3/obj/Debug/net5.0/staticwebassets/Gp-3.StaticWebAssets.Manifest.cache
 Gp-3/obj/Debug/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+*.cache
