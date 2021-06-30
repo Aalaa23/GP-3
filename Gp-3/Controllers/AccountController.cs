@@ -14,11 +14,11 @@ namespace Gp_3.Controllers
 
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly UserManager<IdentityUser> userManager;
+        private readonly SignInManager<IdentityUser> signInManager;
         private readonly ILogger<AccountController>logger;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager
             , ILogger<AccountController> logger)
         {
             this.userManager = userManager;
@@ -87,7 +87,7 @@ namespace Gp_3.Controllers
             if (ModelState.IsValid)
             {
                 // Copy data from RegisterViewModel to IdentityUser
-                var user = new ApplicationUser
+                var user = new IdentityUser
                 {
                     UserName = model.Email,
                     Email = model.Email,
