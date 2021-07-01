@@ -354,3 +354,5 @@ C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Shared\Not
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddProduct.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\InvList.cshtml.g.cs
 C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\Profile.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\EditInv.cshtml.g.cs
+C:\Users\Voli\Documents\GitHub\GP-3\Gp-3\obj\Debug\net5.0\Razor\Views\Seller\AddInv.cshtml.g.cs

@@ -101,7 +101,7 @@
                         </span>
                     </h2>
                     <div class="text-right">
-                        <a href="addnewinventory.html" class="btn btn-custom-6 btn-lger min-width-sm">Add New Inventory</a>
+                        <a asp-controller="Seller" asp-action="AddInv" class="btn btn-custom-6 btn-lger min-width-sm">Add New Inventory</a>
                     </div>
                     <br />
                     <div class="row">
@@ -141,8 +141,8 @@
                                                     </td>
                                                     <td>
                                                         <div class="btn-group btn-group-xs">
-                                                            <button class="btn btn-sm btn-default"><a href="updateinventory.html"><i class="fa fa-edit"></i> </a></button>
-                                                            <button class="btn btn-sm btn-red"><i class="fa fa-trash-o"></i> </button>
+                                                            <a asp-controller="Seller" asp-action="EditInv" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> </a>
+                                                            <a asp-controller="Seller" asp-action="DeleteInv" class="btn btn-sm btn-red"><i class="fa fa-trash-o"></i> </a>
                                                         </div>
                                                     </td>
                                                 </tr>
