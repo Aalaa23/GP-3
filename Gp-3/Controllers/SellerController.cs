@@ -1,4 +1,5 @@
 ﻿using Gp_3.Models;
+using Gp_3.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,20 +11,40 @@ namespace Gp_3.Controllers
 {
     public class SellerController : Controller
     {
+        private readonly UserManager<IdentityUser> _userManager;
+        public SellerController(UserManager<IdentityUser> userManager)
+        {
+            _userManager = userManager;
+        }
         public IActionResult Index()
         {
             return View();
         }
-        
-        //GET : Add product.
-        public IActionResult AddProduct(int id) {
-            return View();
-        }
 
-        //POST : Add Product/
-        public IActionResult AddProduct(Product product)
+        //GET : Add Product/
+        public IActionResult AddProduct()
         {
             return View();
         }
+
+        //POST : Add product.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddProduct(int id) {
+            
+            return View();
+        }
+        public IActionResult InvList(int id)
+        {
+
+            return View();
+        }
+        public IActionResult Profile(int id)
+        {
+
+            return View();
+        }
+
+
     }
 }

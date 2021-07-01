@@ -36,10 +36,21 @@ namespace Gp_3
             services.AddScoped<IShoppingRepository<Category>,CategoryRepository>();
             services.AddScoped<IShoppingRepository<Seller>,SellerRepository>();
             services.AddScoped<IShoppingRepository<Customer>,CustomerRepository>();
-            //services.AddIdentity<IdentityUser, IdentityRole>();   
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ShoppingDbContext>();
+                .AddRoles<IdentityRole>().AddEntityFrameworkStores<ShoppingDbContext>()
+                    ;
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+             services.AddHttpContextAccessor();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +71,8 @@ namespace Gp_3
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();

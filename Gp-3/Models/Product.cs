@@ -22,6 +22,7 @@ namespace Gp_3.Models
         public ICollection<WishListProducts> WishListProducts { get; set; }
         public ICollection<CartProducts> CartProducts { get; set; }
         public ICollection<OrderDetails> OrderDetails { get; set; }
+        public ICollection<InventoryProducts> InventoryProducts { get; set; }
 
     }
 }

@@ -27,7 +27,7 @@ namespace Gp_3.Controllers
             this.hosting = hosting;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
             return View();
         }
